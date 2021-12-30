@@ -21,7 +21,7 @@ set nowrap
 " set smartcase
 set noswapfile
 set nobackup
-set undodir='stdpath("data")/undodir'
+" set undodir='stdpath("data")/undodir'
 set undofile
 set incsearch
 set termguicolors
