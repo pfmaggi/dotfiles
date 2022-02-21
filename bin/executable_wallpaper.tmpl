@@ -7,6 +7,6 @@ if len(args) == 0:
     args = [""]
 walls = list()
 for source in args:
-    walls += glob.glob("{{ chezmoi.homeDir }}/Pictures/wallpapers/" + source + "/*.*")
+    walls += glob.glob("{{ .chezmoi.homeDir }}/Pictures/wallpapers/" + source + "/*.*")
 print(random.choice(walls))
 
