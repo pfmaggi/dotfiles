@@ -1,0 +1,11 @@
+##!/bin/bash
+
+DEVICES=`adb devices | grep -v devices | grep device | cut -f 1`
+for device in $DEVICES; do
+    DISPLAYS=`adb -s $device shell dumpsys SurfaceFlinger --display-id | cut -d" " -f 2`
+    for display in $DISPLAYS; do
+        echo "Capturing from $display on $device"
+        output="screen_$(echo $device)_$(echo $display)_$(date +%Y%m%d_%H%M%S).png"
+        adb -s $device exec-out screencap -p -d $display > $output
+    done
+done
