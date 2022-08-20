@@ -3,4 +3,4 @@
     autoPush = true
 
 [data]
-    email = "pfm@pietromaggi.com"
+    email = "{{ .email }}"
