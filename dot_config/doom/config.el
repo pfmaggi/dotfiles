@@ -40,7 +40,7 @@
 (setq projectile-project-search-path '("~/Sources/"))
 
 (after! geiser
-  (setq geiser-chez-binary (executable-find "chez"))
+  ;; (setq geiser-chez-binary (executable-find "chez"))
   (setq geiser-guile-binary (executable-find "guile"))
   ;; (setq geiser-repl-use-other-window nil)
   ;; (define-advice org-babel-scheme-get-repl (:around (old-fun &rest args) dont-switch-buffer)
