@@ -101,3 +101,16 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+
+;; Zig and Zig language server configuration
+(use-package! zig-mode
+  :hook ((zig-mode . lsp-deferred))
+  :custom (zig-format-on-save nil)
+  :config
+  (after! lsp-mode
+    (add-to-list 'lsp-language-id-configuration '(zig-mode . "zig"))
+    (lsp-register-client
+      (make-lsp-client
+        :new-connection (lsp-stdio-connection "~/bin/zls")
+        :major-modes '(zig-mode)
+        :server-id 'zls))))
