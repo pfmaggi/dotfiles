@@ -37,7 +37,7 @@
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
 (setq display-line-numbers-type 'relative)
 
-(setq projectile-project-search-path '("~/Soources/"))
+(setq projectile-project-search-path '("~/Sources/"))
 
 (after! geiser
   (setq geiser-chez-binary (executable-find "chez"))
