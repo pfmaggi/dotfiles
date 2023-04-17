@@ -30,7 +30,7 @@ set $mod Mod4
 include /etc/sway/inputs/*
 include /etc/sway/outputs/*
 
-exec_always /home/debian11/.config/sway/clamshell.sh
+exec_always /home/pmaggi/bin/clamshell.sh
 bindswitch --reload --locked lid:on output LVDS-1 disable
 bindswitch --reload --locked lid:off output LVDS-1 enable
 
